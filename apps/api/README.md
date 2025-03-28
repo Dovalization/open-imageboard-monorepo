@@ -1,4 +1,6 @@
-# With-NestJs | API
+# OpenImageboard | API
+
+This is the API that powers the platform. It is built with [NestJS](https://nestjs.com/) and serves as a backend for the OpenImageboard frontend. The API is designed to be modular and extensible, allowing for easy integration with other services and applications.
 
 ## Getting Started
 
@@ -9,12 +11,6 @@ pnpm run dev
 ```
 
 By default, your server will run at [http://localhost:3000](http://localhost:3000). You can use your favorite API platform like [Insomnia](https://insomnia.rest/) or [Postman](https://www.postman.com/) to test your APIs
-
-You can start editing the demo **APIs** by modifying [linksService](./src/links/links.service.ts) provider.
-
-### ⚠️ Note about build
-
-If you plan to only build this app. Please make sure you've built the packages first.
 
 ## Learn More
 
