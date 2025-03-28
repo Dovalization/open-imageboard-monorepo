@@ -1,4 +1,4 @@
-import { AccountsRepository } from '../accounts/domain/accounts-repository';
+import { AccountsRepository } from '../accounts/accounts-repository';
 import { Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { LoginDTO } from './auth.types';
