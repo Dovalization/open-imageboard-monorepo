@@ -1,6 +1,6 @@
 import { Global, Module } from '@nestjs/common';
 
-import { AccountsRepository } from '../../accounts/domain/accounts-repository';
+import { AccountsRepository } from '../../accounts/accounts-repository';
 import { PrismaRepository } from './prisma-repository';
 import { PrismaService } from './prisma.service';
 

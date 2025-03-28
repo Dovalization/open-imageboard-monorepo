@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { PrismaService } from '../modules/database/prisma/prisma.service';
+import { PrismaService } from '@api/modules/database/prisma/prisma.service';
 
 @Injectable()
 export class BoardsService {
@@ -10,6 +10,6 @@ export class BoardsService {
   }
 
   async createBoard(name: string) {
-    return this.prisma.board.create({ data: { name } });
+    return this.prisma.board.create({ data: { name, description: '' } });
   }
 }
