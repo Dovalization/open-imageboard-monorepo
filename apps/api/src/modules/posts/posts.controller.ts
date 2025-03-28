@@ -1,5 +1,5 @@
 import { Controller, Req, Delete, Param, Post } from '@nestjs/common';
-import { PostsService } from '../../../posts/posts.service';
+import { PostsService } from './posts.service';
 import { Request } from 'express';
 
 @Controller('boards/:boardId/threads/:threadId/posts')
