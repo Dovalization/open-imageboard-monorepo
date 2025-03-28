@@ -6,8 +6,8 @@ import {
   UsePipes,
 } from '@nestjs/common';
 import { ZodValidationPipe } from 'src/pipes/zod-validation-pipe';
-import { AccountsService } from './application/accounts.service';
-import { CreateAccountSchema } from './application/dtos/create-account-dto';
+import { AccountsService } from './accounts.service';
+import { CreateAccountSchema } from './create-account-dto';
 import { z } from 'zod';
 
 type CreateAccountBody = z.infer<typeof CreateAccountSchema>;

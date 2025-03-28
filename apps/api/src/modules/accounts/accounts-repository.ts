@@ -1,5 +1,5 @@
 import { Account } from './account.entity';
-import { Repository } from '../../../repository';
+import { Repository } from '@api/repository';
 
 export abstract class AccountsRepository implements Repository<Account> {
   abstract findOne(where: Partial<Account>): Promise<Account | null>;

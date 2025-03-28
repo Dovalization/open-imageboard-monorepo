@@ -1,8 +1,8 @@
-import { Account } from '../domain/account.entity';
-import { AccountsRepository } from '../domain/accounts-repository';
+import { Account } from './account.entity';
+import { AccountsRepository } from './accounts-repository';
 import { Injectable } from '@nestjs/common';
 import { PrismaClient } from '@prisma/client';
-import { PrismaRepository } from '../../database/prisma/prisma-repository';
+import { PrismaRepository } from '../database/prisma/prisma-repository';
 
 @Injectable()
 export class PrismaAccountsRepository

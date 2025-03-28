@@ -1,7 +1,7 @@
-import { AccountsRepository } from './domain/accounts-repository';
-import { AccountsService } from './application/accounts.service';
+import { AccountsRepository } from './accounts-repository';
+import { AccountsService } from './accounts.service';
 import { Module } from '@nestjs/common';
-import { PrismaAccountsRepository } from './infra/prisma-accounts-repository';
+import { PrismaAccountsRepository } from './prisma-accounts-repository';
 import { PrismaModule } from '../database/prisma/prisma.module';
 
 @Module({

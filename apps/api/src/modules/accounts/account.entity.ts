@@ -1,6 +1,6 @@
 import { compare, hash } from 'bcryptjs';
 
-import { CreateAccountSchema } from '../application/dtos/create-account-dto';
+import { CreateAccountSchema } from './create-account-dto';
 import { randomUUID } from 'crypto';
 import { z } from 'zod';
 

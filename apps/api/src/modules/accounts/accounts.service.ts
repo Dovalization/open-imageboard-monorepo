@@ -1,6 +1,6 @@
-import { Account } from '../domain/account.entity';
-import { AccountsRepository } from '../domain/accounts-repository';
-import { CreateAccountDTO } from './dtos/create-account-dto';
+import { Account } from './account.entity';
+import { AccountsRepository } from './accounts-repository';
+import { CreateAccountDTO } from './create-account-dto';
 import { Injectable } from '@nestjs/common';
 
 // Assuming you're using DTO for input validation
