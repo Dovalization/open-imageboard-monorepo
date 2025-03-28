@@ -1,0 +1,20 @@
+- Should be able to create a new account.
+- Should be able to authenticate with an account.
+- Should be able to use the application without requiring an account. (`Anonymous User`)
+- User should be able to create threads in boards and post messages in a thread.
+- User created threads and posts should be identifiable by the user name.
+- User should be able to view all threads and messages in a board.
+- User should be able to delete threads and messages that they have created.
+- User should be able to view all boards.
+- Anonymous User should be able to create threads in a board and post messages in a thread anonymously.
+- Anonymous User created threads and posts should be identifiable by `Anonymous User` and asigned a unique id.
+- Anonymous User should be able to view all threads and messages in a board.
+- Anonymous User should be able to delete threads and messages that they have created.
+- Admin should be able to delete any thread or message.
+- Admin should be able to create new boards.
+- Admin should be able to delete boards.
+- Admin should be able to edit boards. i.e. change the name of the board.
+- Admin should be able to view all users on a board.
+- Admin should be able to ip ban a user.
+- Admin should be able to view all ip bans.
+- Admin should be able to remove an ip ban.

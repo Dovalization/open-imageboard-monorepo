@@ -1,0 +1,56 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+model User {
+    id        String   @id @default(uuid())
+    name      String
+    email     String   @unique
+    password  String
+    createdAt DateTime @default(now()) @map("created_at")
+    boards    Board[]
+
+    @@map("users")
+}
+
+model Board {
+    id          String   @id @default(uuid())
+    ownerId     String?  @map("owner_id")
+    owner       User?    @relation(fields: [ownerId], references: [id])
+    name        String   @unique
+    description String
+    threads     Thread[]
+    createdAt   DateTime @default(now()) @map("created_at")
+
+    @@map("boards")
+}
+
+model Thread {
+    id        String   @id @default(uuid())
+    title     String?
+    authorId  String   @map("author_id")
+    content   String
+    boardId   String   @map("board_id")
+    board     Board    @relation(fields: [boardId], references: [id])
+    posts     Post[]
+    createdAt DateTime @default(now()) @map("created_at")
+    updatedAt DateTime @updatedAt @map("updated_at")
+
+    @@map("threads")
+}
+
+model Post {
+    id        String   @id @default(uuid())
+    content   String
+    threadId  String
+    thread    Thread   @relation(fields: [threadId], references: [id])
+    createdAt DateTime @default(now()) @map("created_at")
+    authorId  String   @map("author_id")
+
+    @@map("posts")
+}

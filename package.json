@@ -1,5 +1,5 @@
 {
-  "name": "my-turborepo",
+  "name": "open-imageboard-monorepo",
   "version": "0.0.0",
   "private": true,
   "description": "",
@@ -22,5 +22,9 @@
   "packageManager": "pnpm@8.15.5",
   "engines": {
     "node": ">=18"
+  },
+  "dependencies": {
+    "zod": "^3.24.2",
+    "zod-validation-error": "^3.4.0"
   }
 }
