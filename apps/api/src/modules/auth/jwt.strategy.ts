@@ -12,13 +12,6 @@ const TokenSchema = z.object({
 
 type TokenSchema = z.infer<typeof TokenSchema>;
 
-const AnonymousTokenSchema = z.object({
-  sub: z.string().uuid(),
-  anon: z.literal(true),
-});
-
-type AnonymousTokenSchema = z.infer<typeof AnonymousTokenSchema>;
-
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy) {
   constructor(configService: ConfigService<Env, true>) {
@@ -31,11 +24,7 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
     });
   }
 
-  validate(payload: TokenSchema | AnonymousTokenSchema) {
-    if ('anon' in payload && payload.anon === true) {
-      // Allow anonymous users
-      return AnonymousTokenSchema.parse(payload);
-    }
+  validate(payload: TokenSchema) {
     return TokenSchema.parse(payload);
   }
 }

@@ -1,7 +1,10 @@
 import { ConfigModule, ConfigService } from '@nestjs/config';
 
+import { AnonymousService } from './anonymous.service';
+import { AnonymousStrategy } from './anonymous.strategy';
+import { AuthService } from './auth.service';
 import { AuthenticationController } from './auth.controller';
-import { Env } from 'src/env';
+import { Env } from '@api/env';
 import { JwtModule } from '@nestjs/jwt';
 import { JwtStrategy } from './jwt.strategy';
 import { Module } from '@nestjs/common';
@@ -9,7 +12,9 @@ import { PassportModule } from '@nestjs/passport';
 
 @Module({
   imports: [
-    ConfigModule,
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
     PassportModule,
     JwtModule.registerAsync({
       inject: [ConfigService],
@@ -28,8 +33,8 @@ import { PassportModule } from '@nestjs/passport';
       },
     }),
   ],
-  providers: [JwtStrategy],
   controllers: [AuthenticationController],
+  providers: [AuthService, AnonymousService, JwtStrategy, AnonymousStrategy],
   exports: [JwtModule],
 })
-export class AuthenticationModule {}
+export class AuthModule {}
