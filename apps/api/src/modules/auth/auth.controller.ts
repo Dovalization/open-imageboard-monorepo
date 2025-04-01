@@ -56,20 +56,20 @@ export class AuthenticationController {
     // If no credentials are provided (anonymous user)
 
     if (!body.email && !body.password && ip) {
-      const token = this.anonymousService.createAnonymousSession(
+      const { anonymous_token } = this.anonymousService.createAnonymousSession(
         ip,
         this.sessionTTL,
       );
 
       // Set the JWT token for the anonymous session in a secure, HttpOnly cookie
-      res.cookie('anonymous_id', token, {
+      res.cookie('anonymous_id', anonymous_token, {
         httpOnly: true,
         secure: true, // Use secure cookies in production
         sameSite: 'strict', // Prevent CSRF attacks
         maxAge: this.sessionTTL, // Set cookie expiration (1 day)
       });
 
-      return { token }; // Return the JWT token for anonymous users
+      return { anonymous_token }; // Return the JWT token for anonymous users
     }
 
     // If neither credentials nor anonymous session is provided, return an error
