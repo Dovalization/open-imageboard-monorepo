@@ -1,12 +1,4 @@
-import {
-  Body,
-  Controller,
-  Post,
-  UsePipes,
-  Req,
-  Res,
-  UseGuards,
-} from '@nestjs/common';
+import { Body, Controller, Post, UsePipes, Req, Res } from '@nestjs/common';
 import { ZodValidationPipe } from 'src/pipes/zod-validation-pipe'; // Assuming you have a Zod validation pipe
 import { LoginSchema } from './auth.types';
 import { AuthService } from './auth.service';
