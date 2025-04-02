@@ -12,6 +12,10 @@ pnpm run dev
 
 By default, your server will run at [http://localhost:3000](http://localhost:3000). You can use your favorite API platform like [Insomnia](https://insomnia.rest/) or [Postman](https://www.postman.com/) to test your APIs
 
+## Requirements
+
+You can check out the [API Requirements](./api-requirements.md) document for a detailed list of requirements and features that the API should support.
+
 ## Learn More
 
 To learn more about NestJs, take a look at the following resources:
