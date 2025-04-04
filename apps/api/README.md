@@ -1,6 +1,6 @@
-# OpenImageboard | API
+# OpenBoard | API
 
-This is the API that powers the platform. It is built with [NestJS](https://nestjs.com/) and serves as a backend for the OpenImageboard frontend. The API is designed to be modular and extensible, allowing for easy integration with other services and applications.
+This is the API that powers the platform. It is built with [NestJS](https://nestjs.com/) and serves as a backend for the OpenBoard frontend. The API is designed to be modular and extensible, allowing for easy integration with other services and applications.
 
 ## Getting Started
 

@@ -7,8 +7,8 @@ import { PropsWithChildren } from 'react';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'OpenImageboard',
-  description: 'A simple imageboard',
+  title: 'OpenBoard',
+  description: 'A customizable and open-source discussion board',
 };
 
 export default function RootLayout({ children }: Readonly<PropsWithChildren>) {

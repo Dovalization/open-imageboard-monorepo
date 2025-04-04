@@ -1,6 +1,6 @@
-# **OpenImageboard**
+# **OpenBoard**
 
-**OpenImageboard** is an open-source, easy-to-deploy, and customizable imageboard platform. It provides an easy way to host and manage community-driven discussions, similar to platforms like 4chan, Reddit, and Twitter. The project is designed to be flexible, extensible, and easy to set up for anyone looking to run their own imageboard.
+**OpenBoard** is an open-source, easy-to-deploy, and customizable discussion board/forum platform. It provides an easy way to host and manage community-driven discussions, similar to platforms like old internet forums and platforms such as 4chan, Reddit, and Twitter. The project is designed to be flexible, extensible, and easy to set up for anyone looking to run their own discussion board.
 
 ## **What's inside?**
 
