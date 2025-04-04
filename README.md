@@ -1,6 +1,6 @@
 # **OpenBoard** 🗣️
 
-**OpenBoard** is an open-source, self-hostable discussion board/forum built for privacy-conscious communities, niche interests, hobbyists, and anyone looking for a space to share ideas and engage in discussions. It is designed to be a modern alternative to discussion boards, offering a user-friendly interface and a range of features to enhance the discussion experience
+**OpenBoard** is an open-source, self-hostable meesage board/forum built for privacy-conscious communities, niche interests, hobbyists, and anyone looking for a space to share ideas and engage in discussions. It is designed to be a modern alternative to message boards, offering a user-friendly interface and a range of features to enhance the discussion experience
 
 Inspired the old internet forums and websites lile 4chan, Reddit, and Twitter, OpenBoard aims to provide a plarform to share ideas, discuss topics, and build communities around shared interests.
 It is designed to be a lightweight, fast, and easy-to-use platform that can easily be self-hosted.
@@ -122,6 +122,39 @@ git clone https://github.com/Dovalization/open-imageboard-monorepo.git
 cd open-imageboard-monorepo
 pnpm install
 ```
+
+### Prisma Setup
+
+Set up the database connection in the `.env` file located in the `apps/api` directory.
+Make sure to update the `DATABASE_URL` variable with your PostgreSQL connection string.
+
+```env
+DATABASE_URL="postgresql://user:password@localhost:5432/openboard"
+```
+
+Run the following command to create the database and apply migrations:
+
+```bash
+cd apps/api
+pnpm prisma migrate dev --name init
+```
+
+This will create the database and apply the initial migrations.
+You can also use the following command to create a new migration after making changes to the Prisma schema:
+
+```bash
+cd apps/api
+pnpm prisma migrate dev --name <migration-name>
+```
+
+You can also use the following command to generate a new Prisma client after making changes to the Prisma schema:
+
+```bash
+cd apps/api
+pnpm prisma generate
+```
+
+This will generate the Prisma client in the `node_modules/@prisma/client` directory.
 
 ### Running locally
 
