@@ -210,6 +210,14 @@ pnpm run test:e2e
 
 > Coming soon: Deployment guide for production environments.
 
+## Inspirations
+
+- [YouTube - Bulletin Board System (BBS) - The Internet's First Community
+  ](https://www.youtube.com/watch?v=I18ifd8I6P8)
+- [Wikipedia - Bulletin Board System](https://en.wikipedia.org/wiki/Bulletin_board_system)
+- [Wikipedia - Internet Forum](https://en.wikipedia.org/wiki/Internet_forum)
+- [Wikipedia - Imageboard](https://en.wikipedia.org/wiki/Imageboard)
+
 ## 📄 License
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). Feel free to use, modify, and distribute this code as you see fit.
