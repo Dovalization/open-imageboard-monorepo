@@ -42,6 +42,7 @@
   - Report threads and posts.
   - Blacklist certain words or phrases. e.g., profanity filter.
   - Support for user and content reporting.
+  - Optional support for pre-moderation of posts (i.e., posts must be approved before being visible to other users).
 
 - User moderation tools:
 
