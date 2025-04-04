@@ -1,11 +1,10 @@
 # **OpenBoard** 🗣️
 
 **OpenBoard** is an open-source, self-hosted message board/forum built for privacy-conscious communities, niche interests, hobbyists, and anyone looking for a space to share ideas and engage in discussions. It is designed to be a modern alternative to message boards, offering a user-friendly interface and a range of features to enhance the discussion experience.
-
 Inspired by old internet forums and websites like 4chan, Reddit, and Twitter, OpenBoard aims to provide a platform for sharing ideas, discussing topics, and building communities around shared interests.
 It is designed to be a lightweight, fast, and easy-to-use platform that can easily be self-hosted.
 It is built with a focus on privacy, security, and user control. Anyone can host their own instance of the platform, customize it to their liking, and control their data.
-OpenBoard is designed as a community-driven platform that focuses on user experience and customization. It is built with modern web technologies and follows best practices for security and performance.
+**OpenBoard** is designed as a community-driven platform that focuses on user experience and customization. It is built with modern web technologies and follows best practices for security and performance.
 
 This monorepo is powered by **Next.js** for the frontend, **NestJS** for the backend, and leverages a **PostgreSQL** database along with **Redis** for caching.
 
@@ -60,14 +59,7 @@ This repository uses **Turborepo** to manage multiple packages and applications 
 
 ## 🧭 Roadmap
 
-| Feature                             | Status  |
-| ----------------------------------- | ------- |
-| Redis caching                       | Planned |
-| Voting / reactions                  | Planned |
-| Advanced moderation (reports, logs) | Planned |
-| Real-time updates                   | Planned |
-| Media storage (S3/local)            | Planned |
-| Theming support                     | Planned |
+> Coming soon: The scope of the MVP and future features are still being defined.
 
 ## 💡 Guiding Values
 
