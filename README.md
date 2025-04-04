@@ -71,20 +71,21 @@ This repository uses **Turborepo** to manage multiple packages and applications 
 
 ## 💡 Guiding Values
 
-- **Customizable Experience**
-  Tailor the platform to your community's needs.  
-  Choose your own authentication, moderation, and data storage options.
+- **Customizable**
+  No two communities are the same. OpenBoard is designed to be flexible and customizable to fit your needs.
 
 - **Modular by Design**  
   Easy to strip down or extend. Built for tinkerers and power users.
 
 - **Privacy-First**  
-  Anonymity is a core value. Identity is optional, not required.
-  However, boards can be configured to require accounts for posting.
+  OpenBoard is designed with privacy in mind. No tracking, no ads, no data mining.
+  We have a commitment to protecting user privacy and data security.
+  We are fully transparent about how the platform works and what data is collected and how it is used.
 
 - **Data Ownership**  
-  Your data is your and yours alone. No vendor lock-in or data mining.
+  Your data is your and yours alone. Have it removed at any time and take it with you if you want.
   Easily export your data in standard formats (JSON, CSV) for backup or migration.
+  All data is stored solely on the server it's hosted on and is not shared with any third parties.
 
 - **Admin Control**  
   You decide how your community operates—rules, roles, features.
@@ -97,11 +98,6 @@ This repository uses **Turborepo** to manage multiple packages and applications 
 
 - **Open Source**  
   Fully open source under the MIT license. Fork, modify, and self-host.
-
-- **No Ads, No Tracking**
-  No data collection, no ads. Your data is yours.
-  While you're free to fork and monetize, we won't provide any monetization features out of the box.
-  This is a community-first project, not a business.
 
 - **No Vendor Lock-In**
   Self-hostable and portable. If it runs docker, you can run OpenBoard.
