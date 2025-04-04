@@ -1,191 +1,207 @@
-# **OpenBoard**
+# **OpenBoard** 🗣️
 
-**OpenBoard** is an open-source, easy-to-deploy, and customizable discussion board/forum platform. It provides an easy way to host and manage community-driven discussions, similar to platforms like old internet forums and platforms such as 4chan, Reddit, and Twitter. The project is designed to be flexible, extensible, and easy to set up for anyone looking to run their own discussion board.
+**OpenBoard** is an open-source, self-hostable discussion board/forum built for privacy-conscious communities, niche interests, hobbyists, and anyone looking for a space to share ideas and engage in discussions. It is designed to be a modern alternative to discussion boards, offering a user-friendly interface and a range of features to enhance the discussion experience
 
-## **What's inside?**
+Inspired the old internet forums and websites lile 4chan, Reddit, and Twitter, OpenBoard aims to provide a plarform to share ideas, discuss topics, and build communities around shared interests.
+It is designed to be a lightweight, fast, and easy-to-use platform that can easily be self-hosted.
+It is built with a focus on privacy, security, and user control, allowing anyone to host their own instance of the platform, customize it to their liking, and control their data.
+OpenBoard is designed to be a community-driven platform, with a focus on user experience and customization. It is built with modern web technologies and follows best practices for security and performance.
 
-This **monorepo** uses **Turborepo** to organize the backend and frontend of the project. It is built using **Next.js** for the frontend and **NestJS** for the backend.
+This monorepo is powered by **Next.js** for the frontend, **NestJS** for the backend, and leverages a **PostgreSQL** database along with **Redis** for caching.
 
-### **Apps and Packages**
+## Project Structure
 
-    .
-    ├── apps
-    │   ├── api                       # NestJS app (https://nestjs.com).
-    │   └── web                       # Next.js app (https://nextjs.org).
-    └── packages
-        ├── @repo/eslint-config       # `eslint` configurations (includes `prettier`)
-        ├── @repo/jest-config         # `jest` configurations
-        ├── @repo/typescript-config   # `tsconfig.json`s used throughout the monorepo
+This repository uses **Turborepo** to manage multiple packages and applications within a single monorepo. Here's the structure of the project:
 
-### **Utilities**
-
-This **Turborepo** comes with additional tools already configured for ease of development:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type-safety.
-- [ESLint](https://eslint.org/) for code linting.
-- [Prettier](https://prettier.io) for code formatting.
-- [Jest](https://prettier.io) & [Playwright](https://playwright.dev/) for testing.
-
-## **Commands**
-
-Turborepo is configured with some useful commands for all apps and packages:
-
-#### **Build**
-
-```bash
-# Will build all the apps & packages with the supported `build` script.
-pnpm run build
-
-# ℹ️ If you plan to build apps individually,
-# Please make sure you've built the packages first.
+```
+.
+├── apps
+│   ├── api                       # NestJS app (backend)
+│   └── web                       # Next.js app (frontend)
+└── packages
+    ├── @repo/eslint-config       # ESLint configurations (includes Prettier)
+    ├── @repo/jest-config         # Jest configurations
+    ├── @repo/typescript-config   # TypeScript configurations
 ```
 
-#### **Develop**
+## ✨ Features
 
-```bash
-# Will run the development server for all the apps & packages with the supported `dev` script.
-pnpm run dev
-```
+- **Boards & Threads**  
+  Organize discussions by boards and threads. Each board can have its own rules and settings.
 
-#### **Test**
+- **Customizable Experience**
+  Board owners can customize their boards with rules, descriptions, tags, links to external resources, and more.
 
-```bash
-# Will run the test suites for all the apps & packages with the supported `test` script.
-pnpm run test
+- **OAuth Authentication**  
+  Support for third-party login providers if you want to layer in identity.
 
-# You can run end-to-end tests with `test:e2e`
-pnpm run test:e2e
+- **Moderation Tools**
+  Built-in admin panel with post deletion, user bans, and rule enforcement.
+  OpenBoard provides a sensible suite of moderation tools to keep your community safe and healthy.
 
-# See `@repo/jest-config` to customize the behavior.
-```
+- **Role & Permission System**  
+  Fully configurable roles (admin, mod, etc.) and per-board rules.
 
-#### **Lint**
+- **REST API**  
+  Clean, modular REST endpoints for frontend consumption or API clients.
 
-```bash
-# Will lint all the apps & packages with the supported `lint` script.
-# See `@repo/eslint-config` to customize the behavior.
-pnpm run lint
-```
+- **Docker Deployment**  
+  Easy to spin up locally or in production via Docker Compose.
 
-#### **Format**
+## 🧰 Tech Stack
 
-```bash
-# Will format all the supported `.ts,.js,json,.tsx,.jsx` files.
-# See `@repo/eslint-config/prettier-base.js` to customize the behavior.
-pnpm run format
-```
+- **TypeScript**: A superset of JavaScript that adds static types.
+- **Next.js**: Frontend framework for building user interfaces.
+- **NestJS**: Backend framework for building scalable server-side applications.
+- **PostgreSQL**: Relational database for data storage.
+- **Redis**: In-memory data structure store for caching.
+- **Docker**: Containerization platform for easy deployment.
+- **Turborepo**: Monorepo management tool for managing multiple packages and applications.
 
-## **Tech Stack**
+## 🧭 Roadmap
 
-- **Frontend:** Next.js
-- **Backend:** NestJS
-- **Database:** PostgreSQL (managed with Prisma ORM)
-- **Authentication:** OAuth, Anonymous authentication
-- **Deployment:** Docker for easy deployment
+| Feature                             | Status  |
+| ----------------------------------- | ------- |
+| Redis caching                       | Planned |
+| Voting / reactions                  | Planned |
+| Advanced moderation (reports, logs) | Planned |
+| Real-time updates                   | Planned |
+| Media storage (S3/local)            | Planned |
+| Theming support                     | Planned |
 
-## **Installation**
+## 💡 Guiding Values
 
-To run this project locally, follow these steps:
+- **Customizable Experience**
+  Tailor the platform to your community's needs.  
+  Choose your own authentication, moderation, and data storage options.
 
-### **1. Clone the repository**
+- **Modular by Design**  
+  Easy to strip down or extend. Built for tinkerers and power users.
+
+- **Privacy-First**  
+  Anonymity is a core value. Identity is optional, not required.
+  However, boards can be configured to require accounts for posting.
+
+- **Data Ownership**  
+  Your data is your and yours alone. No vendor lock-in or data mining.
+  Easily export your data in standard formats (JSON, CSV) for backup or migration.
+
+- **Admin Control**  
+  You decide how your community operates—rules, roles, features.
+
+- **Developer Friendly**  
+  Type-safe, well-structured, and easy to deploy and contribute to.
+
+- **Community Driven**
+  Built for communities, by communities. Your feedback shapes the future.
+
+- **Open Source**  
+  Fully open source under the MIT license. Fork, modify, and self-host.
+
+- **No Ads, No Tracking**
+  No data collection, no ads. Your data is yours.
+  While you're free to fork and monetize, we won't provide any monetization features out of the box.
+  This is a community-first project, not a business.
+
+- **No Vendor Lock-In**
+  Self-hostable and portable. If it runs docker, you can run OpenBoard.
+  No proprietary APIs or data formats.
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Before you start, make sure you have the following installed:
+
+- **Node.js**: `>=14.0.0`
+- **Docker**: For containerized deployment
+- **pnpm**: Preferred package manager (install via `npm i -g pnpm`)
+
+### Installation
+
+Clone the repository and install dependencies:
 
 ```bash
 git clone https://github.com/Dovalization/open-imageboard-monorepo.git
 cd open-imageboard-monorepo
+pnpm install
 ```
 
-### **2. Install dependencies for backend and frontend**
+### Running locally
+
+To run both the **API** and the **Web App** locally:
 
 ```bash
-# Install backend dependencies
-cd apps/api
-npm install
-
-# Install frontend dependencies
-cd ../web
-npm install
+pnpm run dev
 ```
 
-### **3. Set up the database**
+This will start both the frontend (Next.js app) and the backend (NestJS API).
 
-- Make sure you have **Docker** installed on your machine.
+### Database
 
-- Run PostgreSQL in Docker:
+The platform uses **PostgreSQL** for data storage. The database schema includes tables for users, boards, threads, posts, roles, permissions, and more.
+
+You can set up the database by running:
 
 ```bash
-docker-compose up
+docker-compose up -d
 ```
 
-### **4. Run Prisma migrations**
+This will bring up the database in a Docker container. The API will connect to the PostgreSQL database using the connection details in the `.env` file.
 
-- Inside the `apps/api` folder, run the migrations to set up the database:
+### Docker Setup
+
+You can use Docker to easily deploy the entire application, including the backend and frontend.
+
+1. **Building Docker Containers**:
 
 ```bash
-npx prisma migrate dev --name init
+docker-compose build
 ```
 
-### **5. Run the project**
-
-- To start the backend server:
+2. **Running the Docker Containers**:
 
 ```bash
-cd apps/api
-npm run start:dev
+docker-compose up -d
 ```
 
-- To start the frontend server:
+This will run both the frontend (Next.js) and backend (NestJS) in Docker containers.
+
+### Testing
+
+Unit and integration tests are written using **Jest** and **Playwright** for end-to-end testing.
+
+Run tests:
 
 ```bash
-cd ../web
-npm run dev
+pnpm run test
 ```
 
-## **Usage**
+For end-to-end tests:
 
-Once the app is running:
+```bash
+pnpm run test:e2e
+```
 
-1. Go to [http://localhost:3000](http://localhost:3000) to access the frontend.
-2. The **backend API** is available at [http://localhost:3001/api](http://localhost:3001/api).
-3. You can start creating boards, threads, and posts, or explore the API for programmatic access.
+### Deployment
 
-## **API**
+> Coming soon: Deployment guide for production environments.
 
-The **REST API** is designed to be straightforward and extensible.
+## 📄 License
 
-### **Endpoints**
+This project is licensed under the (MIT License)[https://opensource.org/licenses/MIT]. Feel free to use, modify, and distribute this code as you see fit.
 
-#### **Threads**
+## 🤝 Contributing
 
-- **GET /threads**  
-  Get all threads.
+We're building this in the open. Contributions, discussions, and feature suggestions are welcome.  
+Here's how you can contribute:
 
-- **GET /threads/:id**  
-  Get a single thread by ID.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature-branch`)
+3. Commit your changes (`git commit -am 'Add new feature'`)
+4. Push to the branch (`git push origin feature-branch`)
+5. Create a new pull request
 
-- **POST /threads**  
-  Create a new thread.
+## 👀 Status
 
-- **DELETE /threads/:id**  
-  Delete a thread by ID.
-
-#### **Posts**
-
-- **GET /threads/:threadId/posts**  
-  Get all posts in a thread.
-
-- **POST /threads/:threadId/posts**  
-  Create a new post in a thread.
-
-- **DELETE /posts/:id**  
-  Delete a post by ID.xw
-
-## **Contributing**
-
-We welcome contributions! To contribute:
-
-1. Fork the repository.
-2. Clone your fork locally.
-3. Create a new branch (`git checkout -b feature-name`).
-4. Make your changes and write tests.
-5. Commit and push your changes.
-6. Submit a pull request.
+This project is in early development. Stay tuned for the first stable MVP release.
