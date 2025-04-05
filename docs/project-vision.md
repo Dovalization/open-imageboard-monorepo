@@ -1,4 +1,4 @@
-# **OpenBoard ADR 00:** Project Vision
+# **OpenBoard: Project Vision**
 
 ## Context
 
