@@ -5,13 +5,17 @@ import type { Request } from 'express';
 
 @Injectable()
 export class PostsService {
-  constructor(
-    private prisma: PrismaService,
-    private authService: AuthService,
-  ) {}
+  constructor(private prisma: PrismaService) {}
 
-  async createPostInThread(threadId: string, content: string, req: Request) {
-    const authorId = 'test';
+  async createPostInThread({
+    threadId,
+    authorId,
+    content,
+  }: {
+    threadId: string;
+    authorId: string;
+    content: string;
+  }) {
     return this.prisma.post.create({
       data: { content, threadId, authorId },
     });
