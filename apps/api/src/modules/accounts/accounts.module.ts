@@ -5,11 +5,11 @@ import { PrismaAccountsRepository } from './prisma-accounts-repository';
 import { PrismaModule } from '../database/prisma/prisma.module';
 
 @Module({
-  imports: [PrismaModule], // Import PrismaModule, which provides the PrismaAccountRepository
+  imports: [PrismaModule],
   providers: [
-    AccountsService, // Service that uses AccountRepository
-    { provide: AccountsRepository, useClass: PrismaAccountsRepository }, // Bind AccountRepository to PrismaAccountRepository
+    AccountsService,
+    { provide: AccountsRepository, useClass: PrismaAccountsRepository }, //
   ],
-  exports: [AccountsService], // Export AccountService for use in other modules
+  exports: [AccountsService],
 })
 export class AccountModule {}

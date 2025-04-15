@@ -27,9 +27,8 @@ export class AnonymousService {
   // Generate a unique anonymous ID and store session data
   createAnonymousSession(ip: string, sessionTTL: number) {
     const anonymousId = randomUUID(); // Generate a random UUID
-    const expiresAt = new Date(Date.now() + sessionTTL); // Set expiration for 24 hours
+    const expiresAt = new Date(Date.now() + sessionTTL);
 
-    // Store the session in memory with expiration timestamp
     this.anonymousSessions.set(
       anonymousId,
       AnonymousSessionSchema.parse({
@@ -37,7 +36,7 @@ export class AnonymousService {
         createdAt: new Date(),
         lastActivityAt: new Date(),
         actionCount: 0,
-        expiresAt, // Store expiration timestamp
+        expiresAt,
       }),
     );
 
