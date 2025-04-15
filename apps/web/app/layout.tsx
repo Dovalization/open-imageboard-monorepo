@@ -1,20 +1,31 @@
 import './globals.css';
 
+import { Header } from '@/components/header';
 import { Inter } from 'next/font/google';
-import type { Metadata } from 'next';
-import { PropsWithChildren } from 'react';
+import type React from 'react';
+import { Toaster } from '@/components/ui/toaster';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'OpenBoard',
-  description: 'A customizable and open-source discussion board',
+  description: 'A modular and anonymous-first imageboard platform',
 };
 
-export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${inter.className} dark`}>
+        <Header />
+        <main className="min-h-screen bg-gradient-to-b from-background to-background/95 flex flex-col content-fade-in items-center w-full">
+          {children}
+        </main>
+        <Toaster />
+      </body>
     </html>
   );
 }

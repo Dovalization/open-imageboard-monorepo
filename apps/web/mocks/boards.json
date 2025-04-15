@@ -1,0 +1,224 @@
+{
+  "boards": [
+    {
+      "id": "tech",
+      "name": "Technology",
+      "description": "Discussion about technology, programming, and gadgets",
+      "threadCount": 142,
+      "postCount": 1253,
+      "activity": "high",
+      "icon": "💻",
+      "trend": "rising",
+      "coverImage": "/placeholder.svg?height=400&width=1200",
+      "createdAt": "2022-01-15T10:00:00Z",
+      "visibility": "public",
+      "popularity": "high",
+      "category": "Interests"
+    },
+    {
+      "id": "games",
+      "name": "Gaming",
+      "description": "Video games, board games, and game development",
+      "threadCount": 98,
+      "postCount": 876,
+      "activity": "high",
+      "icon": "🎮",
+      "trend": "stable",
+      "coverImage": "/placeholder.svg?height=400&width=1200",
+      "createdAt": "2022-02-20T14:30:00Z",
+      "visibility": "public",
+      "popularity": "high",
+      "category": "Interests"
+    },
+    {
+      "id": "art",
+      "name": "Art",
+      "description": "Share and discuss artwork, photography, and creative projects",
+      "threadCount": 76,
+      "postCount": 543,
+      "activity": "medium",
+      "icon": "🎨",
+      "trend": "rising",
+      "coverImage": "/placeholder.svg?height=400&width=1200",
+      "createdAt": "2022-03-10T09:15:00Z",
+      "visibility": "public",
+      "popularity": "medium",
+      "category": "Creative"
+    },
+    {
+      "id": "music",
+      "name": "Music",
+      "description": "Music discussion, recommendations, and production",
+      "threadCount": 54,
+      "postCount": 421,
+      "activity": "medium",
+      "icon": "🎵",
+      "trend": "new",
+      "coverImage": "/placeholder.svg?height=400&width=1200",
+      "createdAt": "2022-04-05T16:45:00Z",
+      "visibility": "public",
+      "popularity": "medium",
+      "category": "Creative"
+    },
+    {
+      "id": "weebs",
+      "name": "Anime & Manga",
+      "description": "Discussion about Japanese animation and comics",
+      "threadCount": 120,
+      "postCount": 980,
+      "activity": "high",
+      "icon": "🇯🇵",
+      "trend": "stable",
+      "coverImage": "/placeholder.svg?height=400&width=1200",
+      "createdAt": "2022-01-20T12:30:00Z",
+      "visibility": "public",
+      "popularity": "high",
+      "category": "Japanese Culture"
+    },
+    {
+      "id": "sci",
+      "name": "Science & Math",
+      "description": "Scientific discussions and mathematical problems",
+      "threadCount": 65,
+      "postCount": 430,
+      "activity": "medium",
+      "icon": "🔬",
+      "trend": "stable",
+      "coverImage": "/placeholder.svg?height=400&width=1200",
+      "createdAt": "2022-03-15T09:20:00Z",
+      "visibility": "public",
+      "popularity": "medium",
+      "category": "Interests"
+    },
+    {
+      "id": "photo",
+      "name": "Photography",
+      "description": "Share and discuss photography techniques and images",
+      "threadCount": 48,
+      "postCount": 320,
+      "activity": "medium",
+      "icon": "📷",
+      "trend": "rising",
+      "coverImage": "/placeholder.svg?height=400&width=1200",
+      "createdAt": "2022-02-25T14:10:00Z",
+      "visibility": "public",
+      "popularity": "medium",
+      "category": "Creative"
+    },
+    {
+      "id": "fit",
+      "name": "Fitness",
+      "description": "Workout routines, nutrition, and health discussions",
+      "threadCount": 42,
+      "postCount": 310,
+      "activity": "medium",
+      "icon": "💪",
+      "trend": "stable",
+      "coverImage": "/placeholder.svg?height=400&width=1200",
+      "createdAt": "2022-03-05T10:45:00Z",
+      "visibility": "public",
+      "popularity": "medium",
+      "category": "Other"
+    },
+    {
+      "id": "food",
+      "name": "Food & Cooking",
+      "description": "Recipes, cooking techniques, and food discussions",
+      "threadCount": 58,
+      "postCount": 410,
+      "activity": "medium",
+      "icon": "🍳",
+      "trend": "rising",
+      "coverImage": "/placeholder.svg?height=400&width=1200",
+      "createdAt": "2022-02-10T11:30:00Z",
+      "visibility": "public",
+      "popularity": "medium",
+      "category": "Creative"
+    },
+    {
+      "id": "travel",
+      "name": "Travel",
+      "description": "Travel destinations, tips, and experiences",
+      "threadCount": 36,
+      "postCount": 280,
+      "activity": "medium",
+      "icon": "✈️",
+      "trend": "stable",
+      "coverImage": "/placeholder.svg?height=400&width=1200",
+      "createdAt": "2022-03-20T13:15:00Z",
+      "visibility": "public",
+      "popularity": "medium",
+      "category": "Other"
+    },
+    {
+      "id": "lit",
+      "name": "Literature",
+      "description": "Book discussions, recommendations, and literary analysis",
+      "threadCount": 32,
+      "postCount": 240,
+      "activity": "low",
+      "icon": "📚",
+      "trend": "stable",
+      "coverImage": "/placeholder.svg?height=400&width=1200",
+      "createdAt": "2022-04-01T09:50:00Z",
+      "visibility": "public",
+      "popularity": "low",
+      "category": "Creative"
+    },
+    {
+      "id": "business",
+      "name": "Business & Finance",
+      "description": "Business strategies, investments, and financial discussions",
+      "threadCount": 45,
+      "postCount": 320,
+      "activity": "medium",
+      "icon": "💼",
+      "trend": "rising",
+      "coverImage": "/placeholder.svg?height=400&width=1200",
+      "createdAt": "2022-02-15T10:20:00Z",
+      "visibility": "public",
+      "popularity": "medium",
+      "category": "Other"
+    }
+  ],
+  "favoriteBoards": [
+    {
+      "id": "tech",
+      "name": "Technology",
+      "icon": "💻"
+    },
+    {
+      "id": "gaming",
+      "name": "Gaming",
+      "icon": "🎮"
+    },
+    {
+      "id": "art",
+      "name": "Art",
+      "icon": "🎨"
+    }
+  ],
+  "recentBoards": [
+    {
+      "id": "music",
+      "name": "Music",
+      "icon": "🎵"
+    },
+    {
+      "id": "movies",
+      "name": "Movies",
+      "icon": "🎬"
+    },
+    {
+      "id": "books",
+      "name": "Books",
+      "icon": "📚"
+    }
+  ],
+  "categories": [
+    "Japanese Culture",
+    "Interests",
+    "Creative",
+    "Other"
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "threads": [
+    {
+      "id": "1",
+      "title": "What's your favorite programming language?",
+      "content": "I've been using TypeScript for a while now and I'm loving it. What languages do you all prefer and why?",
+      "author": "Anonymous",
+      "authorId": "a1b2c3",
+      "boardId": "tech",
+      "boardName": "Technology",
+      "createdAt": "2023-04-15T10:30:00Z",
+      "replyCount": 24,
+      "viewCount": 87,
+      "imageUrl": null,
+      "trending": true,
+      "hotness": 95
+    },
+    {
+      "id": "2",
+      "title": "New GPU announcement discussion",
+      "content": "Did you see the specs on the new graphics cards? Thoughts on pricing and performance?",
+      "author": "Anonymous",
+      "authorId": "d4e5f6",
+      "boardId": "tech",
+      "boardName": "Technology",
+      "createdAt": "2023-04-14T18:45:00Z",
+      "replyCount": 42,
+      "viewCount": 942,
+      "imageUrl": "/placeholder.svg?height=200&width=300",
+      "trending": true,
+      "hotness": 88
+    },
+    {
+      "id": "3",
+      "title": "Open source project collaboration",
+      "content": "Looking for contributors to a new open source project. It's a tool for managing community forums.",
+      "author": "DevUser",
+      "authorId": "g7h8i9",
+      "boardId": "tech",
+      "boardName": "Technology",
+      "createdAt": "2023-04-13T09:15:00Z",
+      "replyCount": 8,
+      "viewCount": 103,
+      "imageUrl": null,
+      "trending": false,
+      "hotness": 65
+    },
+    {
+      "id": "4",
+      "title": "The best indie games of the year so far",
+      "content": "Let's compile a list of the best indie games released this year. I'll start with Hollow Knight: Silksong...",
+      "author": "GameFan",
+      "authorId": "g7h8i9",
+      "boardId": "games",
+      "boardName": "Gaming",
+      "createdAt": "2023-04-13T09:15:00Z",
+      "replyCount": 76,
+      "viewCount": 823,
+      "imageUrl": "/placeholder.svg?height=200&width=300",
+      "trending": false,
+      "hotness": 82
+    },
+    {
+      "id": "5",
+      "title": "Digital art techniques thread",
+      "content": "Share your favorite digital art techniques, tools, and tips. I've been experimenting with procreate lately...",
+      "author": "Anonymous",
+      "authorId": "j0k1l2",
+      "boardId": "art",
+      "boardName": "Art",
+      "createdAt": "2023-04-12T14:20:00Z",
+      "replyCount": 65,
+      "viewCount": 712,
+      "imageUrl": "/placeholder.svg?height=200&width=300",
+      "trending": false,
+      "hotness": 75
+    }
+  ],
+  "recentThreads": [
+    {
+      "id": "1",
+      "title": "Just got the new M3 MacBook Pro - AMA",
+      "content": "I just received the new MacBook Pro with the M3 chip. Performance is incredible so far. Ask me anything about it!",
+      "author": "TechEnthusiast",
+      "authorId": "t1e2c3",
+      "boardId": "tech",
+      "boardName": "Technology",
+      "createdAt": "2023-04-15T10:30:00Z",
+      "replyCount": 12,
+      "viewCount": 87,
+      "imageUrl": "/placeholder.svg?height=200&width=300"
+    },
+    {
+      "id": "2",
+      "title": "New indie game release - Hidden Depths",
+      "content": "Just wanted to share this amazing indie game that was released today. It's called Hidden Depths and the art style is gorgeous.",
+      "author": "Anonymous",
+      "authorId": "g4m5e6",
+      "boardId": "games",
+      "boardName": "Gaming",
+      "createdAt": "2023-04-14T18:45:00Z",
+      "replyCount": 8,
+      "viewCount": 42,
+      "imageUrl": "/placeholder.svg?height=200&width=300"
+    },
+    {
+      "id": "3",
+      "title": "Digital painting process - step by step",
+      "content": "I've been working on improving my digital painting workflow. Here's my latest piece with a step-by-step breakdown.",
+      "author": "ArtistAnon",
+      "authorId": "a7r8t9",
+      "boardId": "art",
+      "boardName": "Art",
+      "createdAt": "2023-04-13T09:15:00Z",
+      "replyCount": 15,
+      "viewCount": 103,
+      "imageUrl": "/placeholder.svg?height=200&width=300"
+    }
+  ]
+}

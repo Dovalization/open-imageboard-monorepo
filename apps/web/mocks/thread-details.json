@@ -1,0 +1,37 @@
+{
+  "thread": {
+    "id": "1",
+    "title": "What's your favorite programming language?",
+    "content": "I've been using TypeScript for a while now and I'm loving it. What languages do you all prefer and why?",
+    "author": "Anonymous",
+    "authorId": "a1b2c3",
+    "createdAt": "2023-04-15T10:30:00Z",
+    "imageUrl": null,
+    "replies": [
+      {
+        "id": "101",
+        "content": "Python all the way! It's so versatile and the syntax is clean.",
+        "author": "Anonymous",
+        "authorId": "d4e5f6",
+        "createdAt": "2023-04-15T10:45:00Z",
+        "imageUrl": null
+      },
+      {
+        "id": "102",
+        "content": "I'm a big fan of Rust. The performance is great and the compiler catches so many potential bugs.",
+        "author": "RustFan",
+        "authorId": "g7h8i9",
+        "createdAt": "2023-04-15T11:15:00Z",
+        "imageUrl": "/placeholder.svg?height=200&width=300"
+      },
+      {
+        "id": "103",
+        "content": "JavaScript/TypeScript for me. The ecosystem is huge and you can build anything from web apps to mobile to desktop.",
+        "author": "Anonymous",
+        "authorId": "j0k1l2",
+        "createdAt": "2023-04-15T12:30:00Z",
+        "imageUrl": null
+      }
+    ]
+  }
+}
