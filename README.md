@@ -235,6 +235,8 @@ Here's how you can contribute:
 4. Push to the branch (`git push origin feature-branch`)
 5. Create a new pull request
 
+> Coming soon: Contribution guidelines and code of conduct.
+
 ## 👀 Status
 
 This project is in early development. Stay tuned for the first stable MVP release.
