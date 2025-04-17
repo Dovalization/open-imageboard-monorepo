@@ -1,26 +1,46 @@
-# OpenBoard | Web Frontend
+# **OpenBoard Web**
 
-## Getting Started
+This is the **web frontend** for the OpenBoard platform, developed with **Next.js** and **Tailwind CSS**. It handles all user-facing interactions, from browsing threads and boards to posting content, moderation interfaces, and authentication flows.
 
-> 🏁 This app depends on the [apps/api](../api/README.md) server. make sure your server is running at the port `3000`
+## 🔗 Related
 
-Run the development server:
+- [OpenBoard](../../README.md)
+- [OpenBoard API](../api/README.md)
 
-```bash
-pnpm run dev
+## 🧰 Tech Stack
+
+- **Next.js** – Full-stack React framework supporting multiple rendering strategies
+- **Tailwind CSS** – Utility-first styling framework
+- **TypeScript** – A superset of JavaScript that adds static types
+
+## 📁 Project Structure
+
+```
+apps/web
+├── app                 # Next.js app directory
+├── components          # Shared UI components
+├── hooks               # Custom React hooks
+├── lib                 # API integration, config, utils
+├── mocks               # Mock data for local dev/testing
+├── public              # Static assets
+└── test                # Unit and integration tests
 ```
 
-Open [localhost:3001](http://localhost:3001) to browse the app.
+## 🚀 Getting Started
 
-### ⚠️ Note about build
+Please refer to the [OpenBoard README](../../README.md) for general setup instructions.
 
-If you plan to only build this app. Please make sure you've built the packages first.
+## 📝 License
 
-## Learn More
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). Feel free to use, modify, and distribute this code as you see fit.
 
-To learn more about Next.js, take a look at the following resources:
+## 🤝 Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn/foundations/about-nextjs) - an interactive Next.js tutorial.
+We're building this in the open. Contributions, discussions, and feature suggestions are welcome.
+Here's how you can contribute:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Fork the repository
+Create your feature branch (git checkout -b feature-branch)
+Commit your changes (git commit -am 'Add new feature')
+Push to the branch (git push origin feature-branch)
+Create a new pull request
