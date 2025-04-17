@@ -84,14 +84,6 @@ export default function Home() {
                 Popular Threads
               </span>
             </CardTitle>
-            <Button
-              asChild
-              variant="outline"
-              size="sm"
-              className="w-full md:w-auto"
-            >
-              <Link href="/popular">View All Popular Threads</Link>
-            </Button>
           </div>
         </CardHeader>
         <CardContent className="p-6">
