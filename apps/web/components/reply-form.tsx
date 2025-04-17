@@ -1,87 +1,78 @@
-"use client"
+'use client';
 
-import type React from "react"
-
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Textarea } from "@/components/ui/textarea"
-import { Upload } from "lucide-react"
-import { useState } from "react"
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import type React from 'react';
+import { Textarea } from '@/components/ui/textarea';
+import { Upload } from 'lucide-react';
+import { useState } from 'react';
 
 interface ReplyFormProps {
-  threadId: string
+  threadId: string;
 }
 
 export function ReplyForm({ threadId }: ReplyFormProps) {
-  const [content, setContent] = useState("")
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [content, setContent] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!content.trim()) return
+    e.preventDefault();
+    if (!content.trim()) return;
 
-    setIsSubmitting(true)
+    setIsSubmitting(true);
 
-    // Mock API call
     try {
-      // In a real app, you would send the data to your API
-      console.log("Creating reply:", { threadId, content })
+      console.log('Creating reply:', { threadId, content });
 
-      // Simulate API delay
-      await new Promise((resolve) => setTimeout(resolve, 1000))
+      await new Promise((resolve) => setTimeout(resolve, 1000));
 
-      // Reset form
-      setContent("")
-
-      // In a real app, you would update the UI with the new reply
-      // or trigger a refetch of the thread data
+      setContent('');
     } catch (error) {
-      console.error("Error creating reply:", error)
+      console.error('Error creating reply:', error);
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
 
   return (
-    <Card className="bg-card/70 backdrop-blur-sm shadow-md border-t-2 border-t-primary/30">
-      <form onSubmit={handleSubmit}>
-        <CardHeader>
-          <CardTitle className="text-xl font-semibold flex items-center">
-            <span className="bg-gradient-to-r from-primary/20 to-purple-500/20 px-2 py-1 rounded-md">Post a Reply</span>
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="space-y-4">
-            <Textarea
-              value={content}
-              onChange={(e) => setContent(e.target.value)}
-              placeholder="Write your reply here..."
-              className="min-h-[120px] bg-background/50 focus:ring-2 focus:ring-primary/50 transition-all"
-              required
-            />
-            <div>
-              <Button
-                type="button"
-                variant="outline"
-                className="bg-background/50 hover:bg-background/80 border-dashed border-2 button-hover-effect w-full sm:w-auto"
-              >
-                <Upload className="mr-2 h-4 w-4" />
-                Attach Image
-              </Button>
-              <p className="mt-1 text-xs text-muted-foreground">Supported formats: JPG, PNG, GIF. Max size: 5MB.</p>
-            </div>
-          </div>
-        </CardContent>
-        <CardFooter>
+    <form onSubmit={handleSubmit} className="flex flex-col gap-2">
+      <Textarea
+        value={content}
+        onChange={(e) => setContent(e.target.value)}
+        placeholder="Add a comment..."
+        className="min-h-[100px] bg-background/50 focus:ring-2 focus:ring-primary/50 transition-all border-white/10"
+        required
+      />
+      <div className="flex items-center justify-between">
+        <Button
+          type="button"
+          variant="outline"
+          size="sm"
+          className="bg-background/50 hover:bg-background/80 border-dashed border border-white/20"
+        >
+          <Upload className="mr-1 h-4 w-4" />
+          Attach
+        </Button>
+        <div className="flex gap-2">
+          <Button
+            type="button"
+            variant="outline"
+            size="sm"
+            className="border-white/10"
+            onClick={() => setContent('')}
+          >
+            Cancel
+          </Button>
           <Button
             type="submit"
+            size="sm"
             disabled={isSubmitting || !content.trim()}
-            className="button-hover-effect shadow-md shadow-primary/20"
+            className="bg-primary hover:bg-primary/90"
           >
-            {isSubmitting ? "Posting..." : "Post Reply"}
+            {isSubmitting ? 'Posting...' : 'Comment'}
           </Button>
-        </CardFooter>
-      </form>
-    </Card>
-  )
+        </div>
+      </div>
+    </form>
+  );
 }
