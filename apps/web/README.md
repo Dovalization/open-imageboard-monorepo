@@ -7,7 +7,6 @@ This is the **web frontend** for the OpenBoard platform, developed with **Next.j
 - [OpenBoard Web Requirements](web-requirements.md)
 - [OpenBoard](../../README.md)
 - [OpenBoard API](../api/README.md)
-- [OpenBoard Mobile](../mobile/README.md)
 
 ## 🧰 Tech Stack
 
