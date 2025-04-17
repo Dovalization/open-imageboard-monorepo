@@ -24,11 +24,6 @@ apps/api
 │   ├── modules         # NestJS modules for different features
 │   ├── pipes           # Custom validation and transformation pipes
 │   ├── requests        # HTTP requests for REST Client VSCode extension to test API
-├── hooks               # Custom React hooks
-├── lib                 # API integration, config, utils
-├── mocks               # Mock data for local dev/testing
-├── public              # Static assets
-└── test                # Unit and integration tests
 ```
 
 ## 🚀 Getting Started
