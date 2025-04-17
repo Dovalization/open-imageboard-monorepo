@@ -114,9 +114,7 @@ export default function ThreadPage({
       <hr className="border-white/10" />
       {/* Comment sorting */}
       <div className="flex items-center justify-between">
-        <span className="text-sm text-muted-foreground">
-          {mockThread.replies.length} replies
-        </span>
+        <span className="text-sm text-muted-foreground">Replies</span>
         <div className="flex items-center gap-2">
           <span className="text-sm text-muted-foreground">Sort by:</span>
           <select className="bg-background border border-white/10 rounded-md text-sm py-1 px-2">
