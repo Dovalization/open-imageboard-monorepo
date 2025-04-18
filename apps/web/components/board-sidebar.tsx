@@ -1,25 +1,13 @@
-import Link from "next/link"
-import { CalendarIcon, Bookmark, Shield } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Separator } from "@/components/ui/separator"
-import { Badge } from "@/components/ui/badge"
+import { Bookmark, CalendarIcon, Shield } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
-interface BoardSidebarProps {
-  board: {
-    id: string
-    name: string
-    description: string
-    createdAt: string
-    visibility: "public" | "private"
-    threadCount: number
-    postCount: number
-    popularity: "high" | "medium" | "low"
-    icon: string
-  }
-}
+import { Badge } from '@/components/ui/badge';
+import { Board } from '@/lib/mock-data';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { Separator } from '@/components/ui/separator';
 
-export function BoardSidebar({ board }: BoardSidebarProps) {
+export function BoardSidebar({ board }: { board: Board }) {
   return (
     <div className="space-y-6">
       <Card className="bg-card/70 backdrop-blur-sm border-white/5">
@@ -37,7 +25,9 @@ export function BoardSidebar({ board }: BoardSidebarProps) {
           <div className="space-y-2">
             <div className="flex items-center gap-2 text-sm">
               <CalendarIcon className="h-4 w-4 text-primary/70" />
-              <span>Created {new Date(board.createdAt).toLocaleDateString()}</span>
+              <span>
+                Created {new Date(board.createdAt).toLocaleDateString()}
+              </span>
             </div>
 
             <div className="flex items-center gap-2 text-sm">
@@ -48,19 +38,19 @@ export function BoardSidebar({ board }: BoardSidebarProps) {
                 variant="outline"
                 className={`
                   ${
-                    board.popularity === "high"
-                      ? "bg-green-500/10 text-green-400 border-green-500/20"
-                      : board.popularity === "medium"
-                        ? "bg-blue-500/10 text-blue-400 border-blue-500/20"
-                        : "bg-yellow-500/10 text-yellow-400 border-yellow-500/20"
+                    board.popularity === 'high'
+                      ? 'bg-green-500/10 text-green-400 border-green-500/20'
+                      : board.popularity === 'medium'
+                        ? 'bg-blue-500/10 text-blue-400 border-blue-500/20'
+                        : 'bg-yellow-500/10 text-yellow-400 border-yellow-500/20'
                   }
                 `}
               >
-                {board.popularity === "high"
-                  ? "High Activity"
-                  : board.popularity === "medium"
-                    ? "Medium Activity"
-                    : "Low Activity"}
+                {board.popularity === 'high'
+                  ? 'High Activity'
+                  : board.popularity === 'medium'
+                    ? 'Medium Activity'
+                    : 'Low Activity'}
               </Badge>
             </div>
           </div>
@@ -69,11 +59,15 @@ export function BoardSidebar({ board }: BoardSidebarProps) {
 
           <div className="grid grid-cols-2 gap-2 text-sm">
             <div className="flex flex-col">
-              <span className="text-2xl font-bold text-white">{board.threadCount.toLocaleString()}</span>
+              <span className="text-2xl font-bold text-white">
+                {board.threadCount.toLocaleString()}
+              </span>
               <span className="text-xs text-muted-foreground">Threads</span>
             </div>
             <div className="flex flex-col">
-              <span className="text-2xl font-bold text-white">{board.postCount.toLocaleString()}</span>
+              <span className="text-2xl font-bold text-white">
+                {board.postCount.toLocaleString()}
+              </span>
               <span className="text-xs text-muted-foreground">Posts</span>
             </div>
           </div>
@@ -100,13 +94,20 @@ export function BoardSidebar({ board }: BoardSidebarProps) {
           </div>
           <div className="space-y-1">
             <p className="text-sm font-medium">2. Stay on topic</p>
-            <p className="text-xs text-muted-foreground">Keep discussions relevant to the board's theme.</p>
+            <p className="text-xs text-muted-foreground">
+              Keep discussions relevant to the board's theme.
+            </p>
           </div>
           <div className="space-y-1">
             <p className="text-sm font-medium">3. No spam</p>
-            <p className="text-xs text-muted-foreground">Don't post repetitive or irrelevant content.</p>
+            <p className="text-xs text-muted-foreground">
+              Don't post repetitive or irrelevant content.
+            </p>
           </div>
-          <Link href="#" className="text-xs text-primary hover:underline block mt-2">
+          <Link
+            href="#"
+            className="text-xs text-primary hover:underline block mt-2"
+          >
             View all rules
           </Link>
         </CardContent>
@@ -125,11 +126,14 @@ export function BoardSidebar({ board }: BoardSidebarProps) {
             <Shield className="h-4 w-4 text-primary/70" />
             <span className="text-sm">ModUser123</span>
           </div>
-          <Link href="#" className="text-xs text-primary hover:underline block mt-2">
+          <Link
+            href="#"
+            className="text-xs text-primary hover:underline block mt-2"
+          >
             View all moderators
           </Link>
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }

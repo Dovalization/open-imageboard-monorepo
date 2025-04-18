@@ -1,3 +1,4 @@
+import { Board, getBoardById, getThreadsByBoardId } from '@/lib/mock-data';
 import {
   Card,
   CardContent,
@@ -7,7 +8,6 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Clock, MessageSquare } from 'lucide-react';
-import { getBoardById, getThreadsByBoardId } from '@/lib/mock-data';
 
 import { BoardSidebar } from '@/components/board-sidebar';
 import { Button } from '@/components/ui/button';
@@ -18,18 +18,20 @@ import coverArt from '@/public/cover-art.jpg';
 
 export default function BoardPage({ params }: { params: { id: string } }) {
   const { id } = params;
-  const boardData = getBoardById(id) || {
-    id,
-    name: id.charAt(0).toUpperCase() + id.slice(1),
-    description: 'A community board for discussions.',
-    createdAt: '2022-01-01T00:00:00Z',
-    visibility: 'public',
-    threadCount: 0,
-    postCount: 0,
-    popularity: 'low' as const,
-    icon: '📋',
-    coverImage: '/placeholder.svg?height=400&width=1200',
-  };
+
+  const boardData = getBoardById(id);
+
+  if (!boardData) {
+    return (
+      <div className="container py-10 md:py-16">
+        <h1 className="text-3xl font-bold">Board not found</h1>
+        <p className="text-muted-foreground">
+          The board you are looking for does not exist.
+        </p>
+      </div>
+    );
+  }
+
   const mockThreads = getThreadsByBoardId(id);
 
   return (
@@ -39,9 +41,6 @@ export default function BoardPage({ params }: { params: { id: string } }) {
         <Image src={coverArt} alt="Board Cover" fill className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/70 to-background" />
       </div>
-      {/* Board Title and Info - Positioned over the gradient */}
-      {/* Main Sidebar */}
-      {/* <MainSidebar /> */}
 
       {/* Main Content */}
       <div className="flex-1 transition-all duration-300 -mt-16">
